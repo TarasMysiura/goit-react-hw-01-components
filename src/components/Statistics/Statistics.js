@@ -8,7 +8,7 @@ const Statistics = data => {
   return (
     <div className="stats-card">
       <section className="statistics">
-        <h2 className="title">{title}</h2>
+        {{ title } !== undefined && (<h2 className="title">{title}</h2>)}
 
         <ul className="stat-list">
           <Statistic_item stats={data.stats} />
@@ -17,7 +17,5 @@ const Statistics = data => {
     </div>
   );
 };
-
-
 
 export default Statistics;

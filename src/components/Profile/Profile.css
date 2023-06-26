@@ -1,4 +1,6 @@
-
+body{
+  background-color: ghostwhite;
+}
 
 .card {
   display: block;
@@ -42,14 +44,14 @@ display: flex;
   border: 1px gray solid;
 }
 
-.avatar {
+.profile .avatar {
   width: 300px;
   height: 300px;
   border-radius: 150px;
   border: 1px gray solid;
 }
 
-.name {
+.profile .name {
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 32px;
@@ -68,7 +70,7 @@ display: flex;
   font-weight: 600;
 }
 
-.stats {
+.profile .stats {
   margin-top: 30px;
   display: flex;
 }
