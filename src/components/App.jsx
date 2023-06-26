@@ -1,8 +1,3 @@
-import { Profiler } from 'react';
-import user from 'user.json';
-
-console.log(user.location);
-
 export const App = () => {
   return (
     <div
@@ -12,18 +7,10 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101',
+        color: '#010101'
       }}
     >
-      <div className="App">
-        <Profiler
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-          avatar={user.avatar}
-          stats={user.stats}
-        />
-      </div>
+      React homework template
     </div>
   );
 };
