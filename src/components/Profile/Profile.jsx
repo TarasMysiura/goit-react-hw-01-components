@@ -1,7 +1,7 @@
 import './Profile.css';
 
 
-const Profile = ({
+export const Profile = ({
   username = 'Petra Marica',
   tag = 'pmarica',
   location = 'Salvador, Brasil',
@@ -44,4 +44,4 @@ const Profile = ({
   );
 };
 
-export default Profile
+

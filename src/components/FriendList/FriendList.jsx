@@ -1,13 +1,23 @@
 import React from 'react';
-import Friend from './Freind';
 import './FriendList.css';
 
-const FriendList = ({ friends }) => {
-  console.log(friends);
+export const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
-      <Friend list={friends} />
+      {friends.map(({ id, isOnline, avatar, name, currency }) => (
+        <li className="item" key={id}>
+          {isOnline ? (
+            <span
+              className="status"
+              style={{ backgroundColor: 'green' }}
+            ></span>
+          ) : (
+            <span className="status" style={{ backgroundColor: 'red' }}></span>
+          )}
+          <img className="avatar" src={avatar} alt="User avatar" width="48" />
+          <p className="name">{name}</p>
+        </li>
+      ))}
     </ul>
   );
 };
-export default FriendList;

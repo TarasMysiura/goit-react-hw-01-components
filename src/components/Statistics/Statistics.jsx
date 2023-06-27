@@ -1,21 +1,33 @@
-/* eslint-disable react/jsx-pascal-case */
 import './Statistics.css';
-import Statistic_item from './Statistic_item';
 
-const Statistics = data => {
-  const title = data.title;
-
+export const Statistics = ({ title, stats }) => {
   return (
     <div className="stats-card">
       <section className="statistics">
-        {{ title } !== undefined && (<h2 className="title">{title}</h2>)}
+        {{ title } !== undefined && <h2 className="title">{title}</h2>}
 
         <ul className="stat-list">
-          <Statistic_item stats={data.stats} />
+          {stats.map(({ id, label, percentage, currency }) => (
+            <li
+              key={id}
+              className="item"
+              style={{
+                width: '100%',
+                backgroundColor: `${getRandomHexColor()}`,
+              }}
+            >
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
+            </li>
+          ))}
         </ul>
       </section>
     </div>
   );
 };
 
-export default Statistics;
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
