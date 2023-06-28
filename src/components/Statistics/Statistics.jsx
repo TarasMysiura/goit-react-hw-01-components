@@ -1,4 +1,6 @@
 import './Statistics.css';
+import PropTypes from 'prop-types';
+
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -7,7 +9,7 @@ export const Statistics = ({ title, stats }) => {
         {{ title } !== undefined && <h2 className="title">{title}</h2>}
 
         <ul className="stat-list">
-          {stats.map(({ id, label, percentage, currency }) => (
+          {stats.map(({ id, label, percentage }) => (
             <li
               key={id}
               className="item"
@@ -31,3 +33,11 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
+};

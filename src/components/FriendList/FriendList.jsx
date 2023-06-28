@@ -1,10 +1,12 @@
 import React from 'react';
 import './FriendList.css';
+import PropTypes from 'prop-types';
+
 
 export const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
-      {friends.map(({ id, isOnline, avatar, name, currency }) => (
+      {friends.map(({ id, isOnline, avatar, name }) => (
         <li className="item" key={id}>
           {isOnline ? (
             <span
@@ -21,3 +23,11 @@ export const FriendList = ({ friends }) => {
     </ul>
   );
 };
+
+FriendList.propTypes = {
+  id: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
