@@ -1,26 +1,33 @@
 import React from 'react';
-import './FriendList.css';
 import PropTypes from 'prop-types';
-
+import { Avatar, Friends, Li, Name, Status } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <Friends className="friend-list">
       {friends.map(({ id, isOnline, avatar, name }) => (
-        <li className="item" key={id}>
+        <Li className="item" key={id}>
           {isOnline ? (
-            <span
+            <Status
               className="status"
               style={{ backgroundColor: 'green' }}
-            ></span>
+            ></Status>
           ) : (
-            <span className="status" style={{ backgroundColor: 'red' }}></span>
+            <Status
+              className="status"
+              style={{ backgroundColor: 'red' }}
+            ></Status>
           )}
-          <img className="avatar" src={avatar} alt="User avatar" width="48" />
-          <p className="name">{name}</p>
-        </li>
+          <Avatar
+            className="avatar"
+            src={avatar}
+            alt="User avatar"
+            width="48"
+          />
+          <Name className="name">{name}</Name>
+        </Li>
       ))}
-    </ul>
+    </Friends>
   );
 };
 
@@ -30,4 +37,3 @@ FriendList.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
-
