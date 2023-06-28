@@ -1,16 +1,17 @@
-import './Statistics.css';
+// import './Statistics.css';
 import PropTypes from 'prop-types';
+import { Card, Label, Li, List, Percentage, StatisticsStyle, Title } from './Statistics.styled';
 
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <div className="stats-card">
-      <section className="statistics">
-        {{ title } !== undefined && <h2 className="title">{title}</h2>}
+    <Card className="stats-card">
+      <StatisticsStyle className="statistics">
+        {{ title } !== undefined && <Title className="title">{title}</Title>}
 
-        <ul className="stat-list">
+        <List className="stat-list">
           {stats.map(({ id, label, percentage }) => (
-            <li
+            <Li
               key={id}
               className="item"
               style={{
@@ -18,13 +19,13 @@ export const Statistics = ({ title, stats }) => {
                 backgroundColor: `${getRandomHexColor()}`,
               }}
             >
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}%</span>
-            </li>
+              <Label className="label">{label}</Label>
+              <Percentage className="percentage">{percentage}%</Percentage>
+            </Li>
           ))}
-        </ul>
-      </section>
-    </div>
+        </List>
+      </StatisticsStyle>
+    </Card>
   );
 };
 

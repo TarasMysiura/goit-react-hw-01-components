@@ -32,14 +32,14 @@ export const Description = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Box = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
-  border: 1px gray solid;
-`;
+// export const Box = styled.div`
+//   position: relative;
+//   overflow: hidden;
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 150px;
+//   border: 1px gray solid;
+// `;
 
 export const Avatar = styled.img`
   width: 300px;
@@ -86,14 +86,14 @@ export const Li = styled.li`
   align-items: center;
 `;
 
-export const Label = styled.div`
+export const Label = styled.span`
   font-family: 'Roboto', sans-serif;
   color: gray;
   font-size: 20px;
   font-weight: 500;
 `;
 
-export const Quantity = styled.div`
+export const Quantity = styled.span`
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 24px;
