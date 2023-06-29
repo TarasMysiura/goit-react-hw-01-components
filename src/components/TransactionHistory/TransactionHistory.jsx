@@ -41,9 +41,9 @@ function colorTr(type) {
   return bg;
 }
 
-TransactionHistory.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.string.isRequired,
-};
+// TransactionHistory.propTypes = {
+//   id: PropTypes.string.isRequired,
+//   type: PropTypes.string.isRequired,
+//   amount: PropTypes.number.isRequired,
+//   currency: PropTypes.string.isRequired,
+// };
