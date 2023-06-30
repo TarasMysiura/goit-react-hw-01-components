@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
+export const CardDiv = styled.div`
   display: block;
 
-  background-color: lightgray;
+  background-color: grey;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -12,7 +12,7 @@ export const Card = styled.div`
   align-items: center;
 `;
 
-export const ProfileStyle = styled.div`
+export const ProfileStyleDiv = styled.div`
   background-color: white;
 
   width: 450px;
@@ -25,7 +25,7 @@ export const ProfileStyle = styled.div`
   gap: 20px;
 `;
 
-export const Description = styled.div`
+export const DescriptionDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -41,35 +41,35 @@ export const Description = styled.div`
 //   border: 1px gray solid;
 // `;
 
-export const Avatar = styled.img`
+export const AvatarImg = styled.img`
   width: 300px;
   height: 300px;
   border-radius: 150px;
   border: 1px gray solid;
 `;
 
-export const Name = styled.p`
+export const NameP = styled.p`
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 32px;
   font-weight: 700;
 `;
 
-export const Tag = styled.p`
+export const TagP = styled.p`
   font-family: 'Roboto', sans-serif;
   color: grey;
   font-size: 24px;
   font-weight: 500;
 `;
 
-export const Location = styled.p`
+export const LocationP = styled.p`
   font-family: 'Roboto', sans-serif;
   color: grey;
   font-size: 24px;
   font-weight: 600;
 `;
 
-export const Stats = styled.ul`
+export const StatsUl = styled.ul`
   margin-top: 30px;
   display: flex;
 `;
@@ -86,14 +86,14 @@ export const Li = styled.li`
   align-items: center;
 `;
 
-export const Label = styled.span`
+export const LabelSpan = styled.span`
   font-family: 'Roboto', sans-serif;
   color: gray;
   font-size: 20px;
   font-weight: 500;
 `;
 
-export const Quantity = styled.span`
+export const QuantitySpan = styled.span`
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 24px;

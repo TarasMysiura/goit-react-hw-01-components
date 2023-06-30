@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
+export const CardDiv = styled.div`
   display: block;
 
   background-color: lightgray;
@@ -12,7 +12,7 @@ export const Card = styled.div`
   align-items: center;
 `;
 
-export const StatisticsStyle = styled.section`
+export const StatisticsStyleSection = styled.section`
   background-color: white;
 
   width: 450px;
@@ -25,12 +25,12 @@ export const StatisticsStyle = styled.section`
   gap: 20px;
 `;
 
-export const Title = styled.h2`
+export const TitleH2 = styled.h2`
   text-transform: uppercase;
   color: rgb(112, 112, 112);
   align-self: center;
 `;
-export const List = styled.ul`
+export const ListUl = styled.ul`
   display: flex;
 `;
 
@@ -46,14 +46,14 @@ export const Li = styled.li`
   align-items: center;
 `;
 
-export const Label = styled.span`
+export const LabelSpan = styled.span`
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 20px;
   font-weight: 500;
 `;
 
-export const Percentage = styled.span`
+export const PercentageSpan = styled.span`
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 24px;

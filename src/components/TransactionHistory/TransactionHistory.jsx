@@ -1,6 +1,5 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
-// import './TransactionHistory.css';
 import { Table, Td, Th, Thead } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
@@ -42,8 +41,16 @@ function colorTr(type) {
 }
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
-  currency: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
+
+// TransactionHistory.propTypes = {
+//
+// };

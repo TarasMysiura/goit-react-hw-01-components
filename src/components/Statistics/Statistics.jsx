@@ -1,15 +1,22 @@
 // import './Statistics.css';
 import PropTypes from 'prop-types';
-import { Card, Label, Li, List, Percentage, StatisticsStyle, Title } from './Statistics.styled';
-
+import {
+  CardDiv,
+  LabelSpan,
+  Li,
+  ListUl,
+  PercentageSpan,
+  StatisticsStyleSection,
+  TitleH2,
+} from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Card className="stats-card">
-      <StatisticsStyle className="statistics">
-        {{ title } !== undefined && <Title className="title">{title}</Title>}
+    <CardDiv>
+      <StatisticsStyleSection>
+        {title && <TitleH2>{title}</TitleH2>}
 
-        <List className="stat-list">
+        <ListUl>
           {stats.map(({ id, label, percentage }) => (
             <Li
               key={id}
@@ -19,13 +26,13 @@ export const Statistics = ({ title, stats }) => {
                 backgroundColor: `${getRandomHexColor()}`,
               }}
             >
-              <Label className="label">{label}</Label>
-              <Percentage className="percentage">{percentage}%</Percentage>
+              <LabelSpan>{label}</LabelSpan>
+              <PercentageSpan>{percentage}%</PercentageSpan>
             </Li>
           ))}
-        </List>
-      </StatisticsStyle>
-    </Card>
+        </ListUl>
+      </StatisticsStyleSection>
+    </CardDiv>
   );
 };
 
@@ -35,10 +42,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-
 Statistics.propTypes = {
   title: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
-  label: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
+

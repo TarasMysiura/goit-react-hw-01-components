@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Friends = styled.div`
+export const FriendsUl = styled.ul`
   padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -24,14 +24,14 @@ export const Li = styled.li`
   box-shadow: 1px 1px 2px 3px #999;
 `;
 
-export const Status = styled.span`
+export const StatusSpan = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 10px;
   border: 1px gray solid;
 `;
 
-export const Avatar = styled.img`
+export const AvatarImg = styled.img`
   display: flex;
   gap: 10px;
   width: 150px;
@@ -43,7 +43,7 @@ export const Avatar = styled.img`
   align-items: center;
 `;
 
-export const Name = styled.p`
+export const NameP = styled.p`
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 48px;
